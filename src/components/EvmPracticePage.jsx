@@ -1,5 +1,30 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import EvmMachine from "./EvmMachine";
+
+// Function to play completion beep (1 second)
+const playCompletionBeep = () => {
+  const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+  
+  const frequency = 1000;
+  const duration = 1000; // 1 second
+  
+  const oscillator = audioContext.createOscillator();
+  const gainNode = audioContext.createGain();
+
+  oscillator.connect(gainNode);
+  gainNode.connect(audioContext.destination);
+
+  oscillator.type = 'square';
+  oscillator.frequency.value = frequency;
+
+  gainNode.gain.setValueAtTime(0, audioContext.currentTime);
+  gainNode.gain.linearRampToValueAtTime(0.4, audioContext.currentTime + 0.01);
+  gainNode.gain.linearRampToValueAtTime(0.35, audioContext.currentTime + 0.1);
+  gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + duration / 1000);
+
+  oscillator.start(audioContext.currentTime);
+  oscillator.stop(audioContext.currentTime + duration / 1000);
+};
 
 // Ballot data organized into 2 EVM machines
 const machineData = [
@@ -49,9 +74,31 @@ const machineData = [
 
 export default function EvmPracticePage() {
   const [resetKey, setResetKey] = useState(0);
+  const [allVotedBallots, setAllVotedBallots] = useState(new Set());
+  const [hasPlayedCompletionBeep, setHasPlayedCompletionBeep] = useState(false);
+
+  const handleVote = (ballotId) => {
+    setAllVotedBallots(prev => {
+      const newSet = new Set([...prev, ballotId]);
+      return newSet;
+    });
+  };
+
+  // Check if all 4 votes are recorded and play completion beep
+  useEffect(() => {
+    if (allVotedBallots.size === 4 && !hasPlayedCompletionBeep) {
+      // Small delay to ensure all votes are processed
+      setTimeout(() => {
+        playCompletionBeep();
+        setHasPlayedCompletionBeep(true);
+      }, 100);
+    }
+  }, [allVotedBallots.size, hasPlayedCompletionBeep]);
 
   const handleGlobalReset = () => {
     setResetKey(prev => prev + 1);
+    setAllVotedBallots(new Set());
+    setHasPlayedCompletionBeep(false);
   };
 
   return (
@@ -74,6 +121,8 @@ export default function EvmPracticePage() {
             machineId={machine.machineId}
             ballots={machine.ballots}
             onReset={handleGlobalReset}
+            onVote={handleVote}
+            allVotedBallots={allVotedBallots}
           />
         ))}
       </div>

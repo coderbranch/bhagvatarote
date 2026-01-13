@@ -1,17 +1,11 @@
 import { useState } from "react";
 import BallotUnit from "./BallotUnit";
 
-export default function EvmMachine({ machineId, ballots, onReset }) {
-  const [votedBallots, setVotedBallots] = useState(new Set());
-
+export default function EvmMachine({ machineId, ballots, onReset, onVote, allVotedBallots }) {
   const handleVote = (ballotId) => {
-    if (votedBallots.has(ballotId)) return;
-    setVotedBallots(prev => new Set([...prev, ballotId]));
-  };
-
-  const handleReset = () => {
-    setVotedBallots(new Set());
-    if (onReset) onReset();
+    if (onVote) {
+      onVote(ballotId);
+    }
   };
 
   return (
@@ -39,7 +33,7 @@ export default function EvmMachine({ machineId, ballots, onReset }) {
             key={ballot.id}
             ballot={ballot}
             machineId={machineId}
-            isVoted={votedBallots.has(ballot.id)}
+            isVoted={allVotedBallots?.has(ballot.id) || false}
             onVote={handleVote}
           />
         ))}
