@@ -50,7 +50,7 @@ const ShareIcon = ({ className }) => (
 
 const BoothCard = ({ booth, index, onShare }) => {
   const subBoothsText = (booth.subBooths || [])
-    .map((sb) => `${sb.subBoothNumber}. ${sb.subBoothName} >> ${sb.subBoothAgentName || "N"} | ${sb.subBoothAgentContact || "N"}`)
+    .map((sb) => `${sb.subBoothNumber}. ${sb.subBoothName}`)
     .join("\n");
 
   const shareText = [
@@ -76,27 +76,12 @@ const BoothCard = ({ booth, index, onShare }) => {
             <ul className="list-none pl-0 space-y-2 sm:space-y-1">
               {booth.subBooths.map((sb, sbIndex) => (
                 <li key={sbIndex} className="text-xs sm:text-sm text-gray-700">
-                  {/* Mobile: Row 1 - Booth number + Sub-booth name */}
-                  <div className="flex flex-row items-center gap-2 sm:hidden mb-1">
+                  <div className="flex items-center gap-2 flex-wrap">
                     <span className="inline-flex items-center justify-center w-fit min-w-[34px] px-2 py-0.5 rounded-full bg-gradient-to-r from-[#ffb366] to-[#ff9933] text-white font-extrabold text-xs shadow-sm">
                       {sb.subBoothNumber}
                     </span>
                     <span className="font-semibold break-words flex-1">
                       {sb.subBoothName}
-                    </span>
-                  </div>
-                  {/* Mobile: Row 2 - Agent info */}
-                  <div className="text-gray-600 text-xs sm:hidden pl-[42px]">
-                    {sb.subBoothAgentName || "N"} | <a href={`tel:${sb.subBoothAgentContact || ""}`} className="text-blue-600 hover:text-blue-800 underline">{sb.subBoothAgentContact || "N"}</a>
-                  </div>
-                  {/* Desktop: All in one row */}
-                  <div className="hidden sm:flex sm:items-center gap-2 flex-wrap">
-                    <span className="inline-flex items-center justify-center w-fit min-w-[34px] px-2 py-0.5 rounded-full bg-gradient-to-r from-[#ffb366] to-[#ff9933] text-white font-extrabold text-xs shadow-sm">
-                      {sb.subBoothNumber}
-                    </span>
-                    <span className="font-semibold break-words flex-1">
-                      <span className="break-words">{sb.subBoothName}</span>
-                      <span className="text-gray-600 text-xs sm:text-sm"> {'>>'} {sb.subBoothAgentName || "N"} | <a href={`tel:${sb.subBoothAgentContact || ""}`} className="text-blue-600 hover:text-blue-800 underline">{sb.subBoothAgentContact || "N"}</a></span>
                     </span>
                   </div>
                 </li>
