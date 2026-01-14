@@ -78,21 +78,21 @@ export const allBoothsData = {
       boothSrNo: 5,
       boothName: "मनपा सभागृह शाहू नगर",
       boothNameEnglish: "NMC Hall, Shahu Nagar",
-      boothLocation: "https://www.google.com/maps/search/?api=1&query=NMC%20Hall%20Shahu%20Nagar%20Nashik%20Maharashtra",
+      boothLocation: "https://maps.app.goo.gl/THHyxBFqNNQZSWRq6",
       subBooths: [{ subBoothNumber: 13, subBoothName: "दक्षिण-उत्तर इमारत खो.क्र. 1", subBoothNameEnglish: "North-South Building, Room 1", subBoothAgentName: "रेवती प्रमोद कुमावत", subBoothAgentContact: "9112985758" }],
     },
     {
       boothSrNo: 6,
       boothName: "मनपा अभ्यासिका खुटवडनगर",
       boothNameEnglish: "NMC Library, Khutwadnagar",
-      boothLocation: "https://www.google.com/maps/search/?api=1&query=NMC%20Library%20Khutwadnagar%20Nashik%20Maharashtra",
+      boothLocation: "https://maps.app.goo.gl/uvb9QKFW98LCBurN7",
       subBooths: [{ subBoothNumber: 14, subBoothName: "पूर्व-पश्चिम इमारत खो.क्र. 1", subBoothNameEnglish: "East-West Building, Room 1", subBoothAgentName: "कृष्णा अशोक शिंदे", subBoothAgentContact: "7722017794" }],
     },
     {
       boothSrNo: 7,
       boothName: "चाणक्यनगर सभागृह (दक्षिणमुखी हनुमान मंदिर)",
       boothNameEnglish: "Chanakyanagar Hall (Hanuman Temple Hall)",
-      boothLocation: "https://www.google.com/maps/search/?api=1&query=Chanakyanagar%20Hall%20Hanuman%20Temple%20Nashik%20Maharashtra",
+      boothLocation: "https://maps.app.goo.gl/TebA6LVMMFZN8fJM9",
       subBooths: [{ subBoothNumber: 15, subBoothName: "मुख्य सभागृह", subBoothNameEnglish: "Main Hall", subBoothAgentName: "अविनाश राजेंद्र पाटील", subBoothAgentContact: "7385250984" }],
     },
     {
@@ -100,7 +100,7 @@ export const allBoothsData = {
       boothName: "आझादनगर अल जानिया तू इस्लामिया ऊर्दू शाळा",
       boothNameEnglish: "Al Jamiatul Islamia Urdu School, Azad Nagar",
       boothLocation:
-        "https://www.google.com/maps/search/?api=1&query=Al%20Jamiatul%20Islamia%20Urdu%20School%20Azad%20Nagar%20Nashik%20Maharashtra",
+        "https://maps.app.goo.gl/bn6uDRWbxs5wWKU98",
       subBooths: [
         { subBoothNumber: 16, subBoothName: "उत्तर-दक्षिण इमारत खो.क्र. 1", subBoothNameEnglish: "North-South Building, Room 1", subBoothAgentName: "वेदांत सुनील भडके", subBoothAgentContact: "7385178794" },
         { subBoothNumber: 17, subBoothName: "उत्तर-दक्षिण इमारत खो.क्र. 2", subBoothNameEnglish: "North-South Building, Room 2", subBoothAgentName: "वृषभ प्रभाकर बोबडे", subBoothAgentContact: "9518381551" },
@@ -112,7 +112,7 @@ export const allBoothsData = {
       boothSrNo: 9,
       boothName: "मनपा समाजमंदिर विराट संकुल",
       boothNameEnglish: "NMC Samajmandir, Virat Sankul",
-      boothLocation: "https://www.google.com/maps/search/?api=1&query=NMC%20Samajmandir%20Virat%20Sankul%20Nashik%20Maharashtra",
+      boothLocation: "https://goo.gl/maps/uwrt4xy9myWmMUik8",
       subBooths: [
         { subBoothNumber: 20, subBoothName: "समाजमंदिर खो.क्र. 1", subBoothNameEnglish: "Hall Room 1", subBoothAgentName: "वेदांत सतीश हालगे", subBoothAgentContact: "9146364083" },
         { subBoothNumber: 21, subBoothName: "समाजमंदिर खो.क्र. 2 (उत्तरेकडील)", subBoothNameEnglish: "Hall Room 2 (North)", subBoothAgentName: "आदर्श रवीश सिंग", subBoothAgentContact: "9673270159" },
@@ -122,14 +122,14 @@ export const allBoothsData = {
       boothSrNo: 10,
       boothName: "अंगणवाडी सजीवनगर",
       boothNameEnglish: "Anganwadi, Sanjivannagar",
-      boothLocation: "https://www.google.com/maps/search/?api=1&query=Anganwadi%20Sanjivannagar%20Nashik%20Maharashtra",
+      boothLocation: "https://maps.app.goo.gl/kt1r9knCkq5EpFeRA",
       subBooths: [{ subBoothNumber: 22, subBoothName: "पूर्व-पश्चिम इमारत खो.क्र. 1", subBoothNameEnglish: "East-West Building, Room 1", subBoothAgentName: "उज्ज्वल धनंजय पाठक", subBoothAgentContact: "8087167453" }],
     },
     {
       boothSrNo: 11,
       boothName: "मनपा शाळा क्र. 72 व 73, चुंचाळे",
       boothNameEnglish: "NMC School No. 72 & 73, Chunchale",
-      boothLocation: "https://www.google.com/maps/search/?api=1&query=NMC%20School%2072%20%26%2073%20Chunchale%20Nashik%20Maharashtra",
+      boothLocation: "https://maps.app.goo.gl/Xnx7fPX86NkzJp3u9",
       subBooths: [
         { subBoothNumber: 23, subBoothName: "दक्षिणोत्तर इमारत – दक्षिणेकडून खो.क्र. 2", subBoothNameEnglish: "North-South Building, Room 2 (South)", subBoothAgentName: "वेदांत बळनाथ जाधव", subBoothAgentContact: "7028406861" },
         { subBoothNumber: 24, subBoothName: "दक्षिणोत्तर इमारत – दक्षिणेकडून खो.क्र. 3", subBoothNameEnglish: "North-South Building, Room 3 (South)", subBoothAgentName: "विकास सुभाष सरोडे", subBoothAgentContact: "9529717210" },
@@ -157,7 +157,7 @@ export const allBoothsData = {
       boothSrNo: 13,
       boothName: "मनपा शाळा क्र. 74, जाधव टाऊनशिप",
       boothNameEnglish: "NMC School No. 74, Jadhav Township",
-      boothLocation: "https://www.google.com/maps/search/?api=1&query=NMC%20School%2074%20Jadhav%20Township%20Nashik%20Maharashtra",
+      boothLocation: "https://maps.app.goo.gl/exzDGEcfApyN3M8v9",
       subBooths: [
         { subBoothNumber: 34, subBoothName: "जुनी इमारत – उत्तर-दक्षिण, उत्तरेकडील खो.क्र. 1", subBoothNameEnglish: "Old Building – North Wing, Room 1", subBoothAgentName: "जयेश अनिल शिरोडे", subBoothAgentContact: "7066460106" },
         { subBoothNumber: 35, subBoothName: "जुनी इमारत – उत्तर-दक्षिण, उत्तरेकडील खो.क्र. 3", subBoothNameEnglish: "Old Building – North Wing, Room 3", subBoothAgentName: "रोहन राजेंद्र शिंदे", subBoothAgentContact: "9730872816" },
@@ -174,8 +174,7 @@ export const allBoothsData = {
       boothSrNo: 14,
       boothName: "सँट थॅमस माकनकारा चर्च एण्ड कॉन्व्हेंट स्कूल",
       boothNameEnglish: "St. Thomas Malankara Church & Convent School",
-      boothLocation:
-        "https://www.google.com/maps/search/?api=1&query=St.%20Thomas%20Malankara%20Church%20and%20Convent%20School%20Nashik%20Maharashtra",
+      boothLocation: "https://maps.app.goo.gl/QNAbiP6LWEhUMmMz6",
       subBooths: [
         { subBoothNumber: 42, subBoothName: "पूर्व-पश्चिम इमारत खो.क्र. 1", subBoothNameEnglish: "East-West Building, Room 1", subBoothAgentName: "संज्योत प्रकाश जाधव", subBoothAgentContact: "7758087305" },
         { subBoothNumber: 43, subBoothName: "पूर्व-पश्चिम इमारत खो.क्र. 2", subBoothNameEnglish: "East-West Building, Room 2", subBoothAgentName: "प्रविण संपतराव हांडे", subBoothAgentContact: "9130059450" },
@@ -186,23 +185,21 @@ export const allBoothsData = {
       boothSrNo: 15,
       boothName: "मनपा सभागृह मोगलनगर",
       boothNameEnglish: "NMC Hall, Mogalnagar",
-      boothLocation: "https://www.google.com/maps/search/?api=1&query=NMC%20Hall%20Mogalnagar%20Nashik%20Maharashtra",
+      boothLocation: "https://maps.app.goo.gl/x5pQhYEVwv6Ppn2fA",
       subBooths: [{ subBoothNumber: 45, subBoothName: "पूर्व-पश्चिम इमारत – मुख्य सभागृह", subBoothNameEnglish: "East-West Building – Main Hall", subBoothAgentName: "गणेश दीपक नागरे", subBoothAgentContact: "7741958617" }],
     },
     {
       boothSrNo: 16,
       boothName: "स्वाध्याय केंद्र वेणुनगर, साळुँखेनगर (समर्थ सभागृह)",
       boothNameEnglish: "Swadhyay Kendra Venunagar (Samarth Hall), Salunkhe Nagar",
-      boothLocation:
-        "https://www.google.com/maps/search/?api=1&query=Swadhyay%20Kendra%20Venunagar%20Samarth%20Hall%20Salunkhe%20Nagar%20Nashik%20Maharashtra",
+      boothLocation: "https://maps.app.goo.gl/G5jeLxpC9or7ZQBUA",
       subBooths: [{ subBoothNumber: 46, subBoothName: "उत्तर-दक्षिण इमारत – मुख्य सभागृह", subBoothNameEnglish: "North-South Building – Main Hall", subBoothAgentName: "गौरव शरद पाटील", subBoothAgentContact: "7057834785" }],
     },
     {
       boothSrNo: 17,
       boothName: "प्रोगेसिव्ह इंग्लीश मीडियम स्कूल, म्हाडा स्टॉप, जाधव संकूल",
       boothNameEnglish: "Progressive English Medium School, Mhada Stop, Jadhav Sankul",
-      boothLocation:
-        "https://www.google.com/maps/search/?api=1&query=Progressive%20English%20School%20Mhada%20Stop%20Jadhav%20Sankul%20Nashik%20Maharashtra",
+      boothLocation: "https://maps.app.goo.gl/X3s76v632cJmuJoEA",
       subBooths: [
         { subBoothNumber: 47, subBoothName: "उत्तर-दक्षिण इमारत – उत्तरेकडील खो.क्र. 1", subBoothNameEnglish: "North-South Building – North Wing, Room 1", subBoothAgentName: "निलेश रावसाहेब दाभाडे", subBoothAgentContact: "7028646156" },
         { subBoothNumber: 48, subBoothName: "उत्तर-दक्षिण इमारत – दक्षिणेकडील खो.क्र. 2", subBoothNameEnglish: "North-South Building – South Wing, Room 2", subBoothAgentName: "विशाल एकनाथ आहेर", subBoothAgentContact: "8208887666" },
@@ -212,8 +209,7 @@ export const allBoothsData = {
       boothSrNo: 18,
       boothName: "संत गोरोबा काका मंदिर, अहिल्याबाई होळकर सभागृह, संजीवनगर",
       boothNameEnglish: "Sant Goroba Kaka Temple, Ahilyabai Holkar Hall, Sanjivannagar",
-      boothLocation:
-        "https://www.google.com/maps/search/?api=1&query=Sant%20Goroba%20Kaka%20Temple%20Ahilyabai%20Holkar%20Hall%20Sanjivannagar%20Nashik%20Maharashtra",
+      boothLocation: "https://maps.app.goo.gl/n769uHCBpCGotheD8",
       subBooths: [{ subBoothNumber: 49, subBoothName: "सभागृह खो.क्र. 1", subBoothNameEnglish: "Hall Room 1", subBoothAgentName: "अर्जुन संतोष सिंग", subBoothAgentContact: "8149545327" }],
     },
   ],
