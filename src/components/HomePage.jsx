@@ -18,18 +18,16 @@ export default function HomePage() {
     printDiv.style.fontFamily = 'Arial, sans-serif';
     
     printDiv.innerHTML = `
-      <h1 style="text-align: center; font-size: 24px; font-weight: bold; margin-bottom: 20px;">Booth Information</h1>
-      <p style="text-align: center; font-size: 16px; margin-bottom: 30px;">Total Booths: ${totalBooths}</p>
+      <h1 style="text-align: center; font-size: 16.8px; font-weight: bold; margin-bottom: 20px;">प्रभाग क्र. 26  ।  बुथ आणि प्रतिनिधी यादी  ।  एकूण बुथ : ${totalBooths}</h1>
       ${booths.map((booth) => `
         <div style="margin-bottom: 25px; page-break-inside: avoid;">
           <h2 style="font-size: 14px; font-weight: bold; margin-bottom: 10px; line-height: 1.6;">${booth.boothName}</h2>
           ${Array.isArray(booth.subBooths) && booth.subBooths.length > 0 ? `
             <div style="margin-left: 20px; margin-top: 10px;">
-              <p style="font-size: 12px; font-weight: bold; margin-bottom: 8px;">बुथ क्र:</p>
               <ul style="list-style: none; padding: 0; margin: 0;">
                 ${booth.subBooths.map((subBooth) => `
-                  <li style="font-size: 12px; margin-bottom: 6px; line-height: 1.6; padding-left: 10px;">
-                    <strong>${subBooth.subBoothNumber}.</strong> ${subBooth.subBoothName}
+                  <li style="font-size: 14.4px; margin-bottom: 6px; line-height: 1.6; padding-left: 10px;">
+                    <strong>${subBooth.subBoothNumber}.</strong> ${subBooth.subBoothName} >> ${subBooth.subBoothAgentName || "N"} | ${subBooth.subBoothAgentContact || "N"}
                   </li>
                 `).join('')}
               </ul>
@@ -80,18 +78,16 @@ export default function HomePage() {
       exportDiv.style.fontFamily = 'Arial, sans-serif';
       
       exportDiv.innerHTML = `
-        <h1 style="text-align: center; font-size: 24px; font-weight: bold; margin-bottom: 20px;">Booth Information</h1>
-        <p style="text-align: center; font-size: 16px; margin-bottom: 30px;">Total Booths: ${totalBooths}</p>
+        <h1 style="text-align: center; font-size: 16.8px; font-weight: bold; margin-bottom: 20px;">प्रभाग क्र. 26  ।  बुथ आणि प्रतिनिधी यादी  ।  एकूण बुथ : ${totalBooths}</h1>
         ${booths.map((booth) => `
           <div style="margin-bottom: 25px; page-break-inside: avoid;">
             <h2 style="font-size: 14px; font-weight: bold; margin-bottom: 10px; line-height: 1.6;">${booth.boothName}</h2>
             ${Array.isArray(booth.subBooths) && booth.subBooths.length > 0 ? `
               <div style="margin-left: 20px; margin-top: 10px;">
-                <p style="font-size: 12px; font-weight: bold; margin-bottom: 8px;">बुथ क्र:</p>
                 <ul style="list-style: none; padding: 0; margin: 0;">
                   ${booth.subBooths.map((subBooth) => `
-                    <li style="font-size: 12px; margin-bottom: 6px; line-height: 1.6; padding-left: 10px;">
-                      <strong>${subBooth.subBoothNumber}.</strong> ${subBooth.subBoothName}
+                    <li style="font-size: 14.4px; margin-bottom: 6px; line-height: 1.6; padding-left: 10px;">
+                      <strong>${subBooth.subBoothNumber}.</strong> ${subBooth.subBoothName} >> ${subBooth.subBoothAgentName || "N"} | ${subBooth.subBoothAgentContact || "N"}
                     </li>
                   `).join('')}
                 </ul>

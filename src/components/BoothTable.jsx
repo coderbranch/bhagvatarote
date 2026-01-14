@@ -87,15 +87,16 @@ const BoothTable = ({ booths, onShare }) => {
                     </div>
                     {Array.isArray(booth.subBooths) && booth.subBooths.length > 0 && (
                       <div className="mt-3">
-                        <div className="text-xs font-bold text-gray-700 mb-1">बुथ क्र</div>
                         <ul className="list-none pl-0 space-y-1">
                           {booth.subBooths.map((sb, sbIndex) => (
                             <li key={sbIndex} className="text-xs sm:text-sm text-gray-700">
-                              <span className="inline-flex items-center gap-2">
+                              <span className="inline-flex items-center gap-2 flex-wrap">
                                 <span className="inline-flex items-center justify-center min-w-[34px] px-2 py-0.5 rounded-full bg-gradient-to-r from-[#ffb366] to-[#ff9933] text-white font-extrabold text-xs shadow-sm">
                                   {sb.subBoothNumber}
                                 </span>
-                                <span className="font-semibold">{sb.subBoothName}</span>
+                                <span className="font-semibold">
+                                  {sb.subBoothName} {'>>'} {sb.subBoothAgentName || "N"} | {sb.subBoothAgentContact || "N"}
+                                </span>
                               </span>
                             </li>
                           ))}
