@@ -19,7 +19,7 @@ export const allBoothsData = {
         { subBoothNumber: 3, subBoothName: "पूर्व-पश्चिम इमा. पुर्वेकडून खो.क्र.मांक 2", subBoothNameEnglish: "Room 2 (East)", subBoothAgentName: "किशोरी संजय चौधरी", subBoothAgentContact: "9834273243" },
         { subBoothNumber: 4, subBoothName: "पूर्व-पश्चिम इमा. पुर्वेकडून खो.क्र.मांक 3", subBoothNameEnglish: "Room 3 (East)", subBoothAgentName: "राज संजय पाटील", subBoothAgentContact: "9970938493" },
         { subBoothNumber: 5, subBoothName: "उत्तरदक्षिण इमा. उत्तरेकडून खो.क्र. 1", subBoothNameEnglish: "Room 1 (North)", subBoothAgentName: "निलेश सुरेशराव देशमुख", subBoothAgentContact: "9028802127" },
-        { subBoothNumber: 6, subBoothName: "उत्तरदक्षिण इमा. दक्षिणकडून खो.क्र. 1", subBoothNameEnglish: "Room 1 (South)", subBoothAgentName: "प्रसाद कैलास खोडदे", subBoothAgentContact: "9158761706" },
+        { subBoothNumber: 6, subBoothName: "उत्तरदक्षिण इमा. दक्षिणकडून खो.क्र. 1", subBoothNameEnglish: "Room 1 (South)", subBoothAgentName: "प्रसाद कैलास खोदाडे", subBoothAgentContact: "9158761706" },
       ],
     },
     {
@@ -40,14 +40,14 @@ export const allBoothsData = {
           subBoothNumber: 8,
           subBoothName: "माध्यमिक इमारत क्र. 2 – उत्तरदक्षिण, उत्तरेकडून खो.क्र. 2 (सिमिनार हॉल)",
           subBoothNameEnglish: "Secondary Building No.2 – North Wing, Room 2 (Seminar Hall)",
-          subBoothAgentName: "माया प्रविण अवसकर",
+          subBoothAgentName: "माया प्रविण आवस्कर",
           subBoothAgentContact: "7798225306",
         },
         {
           subBoothNumber: 9,
           subBoothName: "माध्यमिक इमारत क्र. 2 – उत्तरदक्षिण, उत्तरेकडून खो.क्र. 3",
           subBoothNameEnglish: "Secondary Building No.2 – North Wing, Room 3",
-          subBoothAgentName: "संदीप बाळू पाटाडे",
+          subBoothAgentName: "संदीप बाळू पाटदे",
           subBoothAgentContact: "9922321242",
         },
         {
@@ -104,7 +104,7 @@ export const allBoothsData = {
       subBooths: [
         { subBoothNumber: 16, subBoothName: "उत्तर-दक्षिण इमारत खो.क्र. 1", subBoothNameEnglish: "North-South Building, Room 1", subBoothAgentName: "वेदांत सुनील भडके", subBoothAgentContact: "7385178794" },
         { subBoothNumber: 17, subBoothName: "उत्तर-दक्षिण इमारत खो.क्र. 2", subBoothNameEnglish: "North-South Building, Room 2", subBoothAgentName: "वृषभ प्रभाकर बोबडे", subBoothAgentContact: "9518381551" },
-        { subBoothNumber: 18, subBoothName: "उत्तर-दक्षिण इमारत खो.क्र. 3", subBoothNameEnglish: "North-South Building, Room 3", subBoothAgentName: "बापूसाहेब फकिरा साळमुते", subBoothAgentContact: "8149526047" },
+        { subBoothNumber: 18, subBoothName: "उत्तर-दक्षिण इमारत खो.क्र. 3", subBoothNameEnglish: "North-South Building, Room 3", subBoothAgentName: "बापूसाहेब फकीरा साल्मुठे", subBoothAgentContact: "8149526047" },
         { subBoothNumber: 19, subBoothName: "उत्तर-दक्षिण इमारत खो.क्र. 4", subBoothNameEnglish: "North-South Building, Room 4", subBoothAgentName: "लोकेश मनोहर अमृतकर", subBoothAgentContact: "8421894745" },
       ],
     },
@@ -114,8 +114,8 @@ export const allBoothsData = {
       boothNameEnglish: "NMC Samajmandir, Virat Sankul",
       boothLocation: "https://www.google.com/maps/search/?api=1&query=NMC%20Samajmandir%20Virat%20Sankul%20Nashik%20Maharashtra",
       subBooths: [
-        { subBoothNumber: 20, subBoothName: "समाजमंदिर खो.क्र. 1", subBoothNameEnglish: "Hall Room 1", subBoothAgentName: "वेदांत सतीश हळगे", subBoothAgentContact: "9146364083" },
-        { subBoothNumber: 21, subBoothName: "समाजमंदिर खो.क्र. 2 (उत्तरेकडील)", subBoothNameEnglish: "Hall Room 2 (North)", subBoothAgentName: "आदर्श रविश सिंग", subBoothAgentContact: "9673270159" },
+        { subBoothNumber: 20, subBoothName: "समाजमंदिर खो.क्र. 1", subBoothNameEnglish: "Hall Room 1", subBoothAgentName: "वेदांत सतीश हालगे", subBoothAgentContact: "9146364083" },
+        { subBoothNumber: 21, subBoothName: "समाजमंदिर खो.क्र. 2 (उत्तरेकडील)", subBoothNameEnglish: "Hall Room 2 (North)", subBoothAgentName: "आदर्श रवीश सिंग", subBoothAgentContact: "9673270159" },
       ],
     },
     {
@@ -162,7 +162,7 @@ export const allBoothsData = {
         { subBoothNumber: 34, subBoothName: "जुनी इमारत – उत्तर-दक्षिण, उत्तरेकडील खो.क्र. 1", subBoothNameEnglish: "Old Building – North Wing, Room 1", subBoothAgentName: "जयेश अनिल शिरोडे", subBoothAgentContact: "7066460106" },
         { subBoothNumber: 35, subBoothName: "जुनी इमारत – उत्तर-दक्षिण, उत्तरेकडील खो.क्र. 3", subBoothNameEnglish: "Old Building – North Wing, Room 3", subBoothAgentName: "रोहन राजेंद्र शिंदे", subBoothAgentContact: "9730872816" },
         { subBoothNumber: 36, subBoothName: "जुनी इमारत – उत्तर-दक्षिण, उत्तरेकडील खो.क्र. 4", subBoothNameEnglish: "Old Building – North Wing, Room 4", subBoothAgentName: "दिव्या कैलास सोनवणे", subBoothAgentContact: "9359799861" },
-        { subBoothNumber: 37, subBoothName: "जुनी इमारत – उत्तर-दक्षिण, उत्तरेकडील खो.क्र. 6", subBoothNameEnglish: "Old Building – North Wing, Room 6", subBoothAgentName: "निकिता भरत कोटमे", subBoothAgentContact: "8208602696" },
+        { subBoothNumber: 37, subBoothName: "जुनी इमारत – उत्तर-दक्षिण, उत्तरेकडील खो.क्र. 6", subBoothNameEnglish: "Old Building – North Wing, Room 6", subBoothAgentName: "निकिता भारत कोटमे", subBoothAgentContact: "8208602696" },
         { subBoothNumber: 38, subBoothName: "नवीन इमारत – उत्तर-दक्षिण, उत्तरेकडील खो.क्र. 1", subBoothNameEnglish: "New Building – North Wing, Room 1", subBoothAgentName: "मनीषा राजेंद्र जाधव", subBoothAgentContact: "8928307262" },
         { subBoothNumber: 39, subBoothName: "नवीन इमारत – उत्तर-dक्षिण, दक्षिणेकडील खो.क्र. 2", subBoothNameEnglish: "New Building – South Wing, Room 2", subBoothAgentName: "शुभम मुरलीधर सिंग", subBoothAgentContact: "9307071844" },
         { subBoothNumber: 40, subBoothName: "अभ्यासिका – उत्तर-दक्षिण इमारत, दक्षिणेकडील खो.क्र. 1", subBoothNameEnglish: "Library – South Wing, Room 1", subBoothAgentName: "ललिता रमेश गवांदे", subBoothAgentContact: "7385197853" },
@@ -179,7 +179,7 @@ export const allBoothsData = {
       subBooths: [
         { subBoothNumber: 42, subBoothName: "पूर्व-पश्चिम इमारत खो.क्र. 1", subBoothNameEnglish: "East-West Building, Room 1", subBoothAgentName: "संज्योत प्रकाश जाधव", subBoothAgentContact: "7758087305" },
         { subBoothNumber: 43, subBoothName: "पूर्व-पश्चिम इमारत खो.क्र. 2", subBoothNameEnglish: "East-West Building, Room 2", subBoothAgentName: "प्रविण संपतराव हांडे", subBoothAgentContact: "9130059450" },
-        { subBoothNumber: 44, subBoothName: "पूर्व-पश्चिम इमारत खो.क्र. 3", subBoothNameEnglish: "East-West Building, Room 3", subBoothAgentName: "वैभव शरद पाटील", subBoothAgentContact: "7350973384" },
+        { subBoothNumber: 44, subBoothName: "पूर्व-पश्चिम इमारत खो.क्र. 3", subBoothNameEnglish: "East-West Building, Room 3", subBoothAgentName: "अक्षय संदीप आहेर", subBoothAgentContact: "8999645699" },
       ],
     },
     {
@@ -187,7 +187,7 @@ export const allBoothsData = {
       boothName: "मनपा सभागृह मोगलनगर",
       boothNameEnglish: "NMC Hall, Mogalnagar",
       boothLocation: "https://www.google.com/maps/search/?api=1&query=NMC%20Hall%20Mogalnagar%20Nashik%20Maharashtra",
-      subBooths: [{ subBoothNumber: 45, subBoothName: "पूर्व-पश्चिम इमारत – मुख्य सभागृह", subBoothNameEnglish: "East-West Building – Main Hall", subBoothAgentName: "सचिन संजय देहाडे", subBoothAgentContact: "7558763321" }],
+      subBooths: [{ subBoothNumber: 45, subBoothName: "पूर्व-पश्चिम इमारत – मुख्य सभागृह", subBoothNameEnglish: "East-West Building – Main Hall", subBoothAgentName: "गणेश दीपक नागरे", subBoothAgentContact: "7741958617" }],
     },
     {
       boothSrNo: 16,
