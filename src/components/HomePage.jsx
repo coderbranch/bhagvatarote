@@ -9,6 +9,30 @@ export default function HomePage() {
   const totalBooths = booths.reduce((sum, booth) => sum + (booth.subBooths?.length || 0), 0);
 
   const handlePrint = async () => {
+    // Group booths by page
+    const page1Booths = booths.filter(b => b.boothSrNo >= 1 && b.boothSrNo <= 7);
+    const page2Booths = booths.filter(b => b.boothSrNo >= 8 && b.boothSrNo <= 10);
+    const page3Booths = booths.filter(b => b.boothSrNo === 11 || b.boothSrNo === 18);
+    const page4Booths = booths.filter(b => b.boothSrNo === 12 || b.boothSrNo === 13);
+    const page5Booths = booths.filter(b => b.boothSrNo >= 14 && b.boothSrNo <= 17);
+
+    const renderBooth = (booth) => `
+      <div style="margin-bottom: 25px; page-break-inside: avoid;">
+        <h2 style="font-size: 14px; font-weight: bold; margin-bottom: 10px; line-height: 1.6;">${booth.boothName}</h2>
+        ${Array.isArray(booth.subBooths) && booth.subBooths.length > 0 ? `
+          <div style="margin-left: 20px; margin-top: 10px;">
+            <ul style="list-style: none; padding: 0; margin: 0;">
+              ${booth.subBooths.map((subBooth) => `
+                <li style="font-size: 14.4px; margin-bottom: 6px; line-height: 1.6; padding-left: 10px;">
+                  <strong>${subBooth.subBoothNumber}.</strong> ${subBooth.subBoothName} >> ${subBooth.subBoothAgentName || "N"} | ${subBooth.subBoothAgentContact || "N"}
+                </li>
+              `).join('')}
+            </ul>
+          </div>
+        ` : ''}
+      </div>
+    `;
+
     // Create a temporary div with the content
     const printDiv = document.createElement('div');
     printDiv.style.position = 'absolute';
@@ -19,22 +43,15 @@ export default function HomePage() {
     
     printDiv.innerHTML = `
       <h1 style="text-align: center; font-size: 16.8px; font-weight: bold; margin-bottom: 20px;">प्रभाग क्र. 26  ।  बुथ आणि प्रतिनिधी यादी  ।  एकूण बुथ : ${totalBooths}</h1>
-      ${booths.map((booth) => `
-        <div style="margin-bottom: 25px; page-break-inside: avoid;">
-          <h2 style="font-size: 14px; font-weight: bold; margin-bottom: 10px; line-height: 1.6;">${booth.boothName}</h2>
-          ${Array.isArray(booth.subBooths) && booth.subBooths.length > 0 ? `
-            <div style="margin-left: 20px; margin-top: 10px;">
-              <ul style="list-style: none; padding: 0; margin: 0;">
-                ${booth.subBooths.map((subBooth) => `
-                  <li style="font-size: 14.4px; margin-bottom: 6px; line-height: 1.6; padding-left: 10px;">
-                    <strong>${subBooth.subBoothNumber}.</strong> ${subBooth.subBoothName} >> ${subBooth.subBoothAgentName || "N"} | ${subBooth.subBoothAgentContact || "N"}
-                  </li>
-                `).join('')}
-              </ul>
-            </div>
-          ` : ''}
-        </div>
-      `).join('')}
+      ${page1Booths.map(renderBooth).join('')}
+      <div style="page-break-before: always;"></div>
+      ${page2Booths.map(renderBooth).join('')}
+      <div style="page-break-before: always;"></div>
+      ${page3Booths.map(renderBooth).join('')}
+      <div style="page-break-before: always;"></div>
+      ${page4Booths.map(renderBooth).join('')}
+      <div style="page-break-before: always;"></div>
+      ${page5Booths.map(renderBooth).join('')}
     `;
     
     document.body.appendChild(printDiv);
@@ -71,6 +88,30 @@ export default function HomePage() {
       // Dynamically import html2pdf
       const html2pdf = (await import('html2pdf.js')).default;
       
+      // Group booths by page
+      const page1Booths = booths.filter(b => b.boothSrNo >= 1 && b.boothSrNo <= 7);
+      const page2Booths = booths.filter(b => b.boothSrNo >= 8 && b.boothSrNo <= 10);
+      const page3Booths = booths.filter(b => b.boothSrNo === 11 || b.boothSrNo === 18);
+      const page4Booths = booths.filter(b => b.boothSrNo === 12 || b.boothSrNo === 13);
+      const page5Booths = booths.filter(b => b.boothSrNo >= 14 && b.boothSrNo <= 17);
+
+      const renderBooth = (booth) => `
+        <div style="margin-bottom: 25px; page-break-inside: avoid;">
+          <h2 style="font-size: 14px; font-weight: bold; margin-bottom: 10px; line-height: 1.6;">${booth.boothName}</h2>
+          ${Array.isArray(booth.subBooths) && booth.subBooths.length > 0 ? `
+            <div style="margin-left: 20px; margin-top: 10px;">
+              <ul style="list-style: none; padding: 0; margin: 0;">
+                ${booth.subBooths.map((subBooth) => `
+                  <li style="font-size: 14.4px; margin-bottom: 6px; line-height: 1.6; padding-left: 10px;">
+                    <strong>${subBooth.subBoothNumber}.</strong> ${subBooth.subBoothName} >> ${subBooth.subBoothAgentName || "N"} | ${subBooth.subBoothAgentContact || "N"}
+                  </li>
+                `).join('')}
+              </ul>
+            </div>
+          ` : ''}
+        </div>
+      `;
+      
       // Create a temporary div with the content
       const exportDiv = document.createElement('div');
       exportDiv.style.width = '800px';
@@ -79,22 +120,15 @@ export default function HomePage() {
       
       exportDiv.innerHTML = `
         <h1 style="text-align: center; font-size: 16.8px; font-weight: bold; margin-bottom: 20px;">प्रभाग क्र. 26  ।  बुथ आणि प्रतिनिधी यादी  ।  एकूण बुथ : ${totalBooths}</h1>
-        ${booths.map((booth) => `
-          <div style="margin-bottom: 25px; page-break-inside: avoid;">
-            <h2 style="font-size: 14px; font-weight: bold; margin-bottom: 10px; line-height: 1.6;">${booth.boothName}</h2>
-            ${Array.isArray(booth.subBooths) && booth.subBooths.length > 0 ? `
-              <div style="margin-left: 20px; margin-top: 10px;">
-                <ul style="list-style: none; padding: 0; margin: 0;">
-                  ${booth.subBooths.map((subBooth) => `
-                    <li style="font-size: 14.4px; margin-bottom: 6px; line-height: 1.6; padding-left: 10px;">
-                      <strong>${subBooth.subBoothNumber}.</strong> ${subBooth.subBoothName} >> ${subBooth.subBoothAgentName || "N"} | ${subBooth.subBoothAgentContact || "N"}
-                    </li>
-                  `).join('')}
-                </ul>
-              </div>
-            ` : ''}
-          </div>
-        `).join('')}
+        ${page1Booths.map(renderBooth).join('')}
+        <div style="page-break-before: always;"></div>
+        ${page2Booths.map(renderBooth).join('')}
+        <div style="page-break-before: always;"></div>
+        ${page3Booths.map(renderBooth).join('')}
+        <div style="page-break-before: always;"></div>
+        ${page4Booths.map(renderBooth).join('')}
+        <div style="page-break-before: always;"></div>
+        ${page5Booths.map(renderBooth).join('')}
       `;
       
       document.body.appendChild(exportDiv);
