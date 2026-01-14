@@ -149,7 +149,7 @@ export const allBoothsData = {
         { subBoothNumber: 29, subBoothName: "पूर्व-पश्चिम इमारत, खो.क्र. 2", subBoothNameEnglish: "East-West Building, Room 2", subBoothAgentName: "बाळकृष्ण अशोक महाजन", subBoothAgentContact: "7083077941" },
         { subBoothNumber: 30, subBoothName: "पूर्व-पश्चिम इमारत, खो.क्र. 3", subBoothNameEnglish: "East-West Building, Room 3", subBoothAgentName: "सुदर्शन सुधाकर वाघचौरे", subBoothAgentContact: "9373442181" },
         { subBoothNumber: 31, subBoothName: "पूर्व-पश्चिम इमारत, खो.क्र. 4", subBoothNameEnglish: "East-West Building, Room 4", subBoothAgentName: "प्रशांत विष्णू माळी", subBoothAgentContact: "8805196101" },
-        { subBoothNumber: 32, subBoothName: "पूर्व-पश्चिम इमारत, खो.क्र. 5", subBoothNameEnglish: "East-West Building, Room 5", subBoothAgentName: "श्रद्धा स्वप्निल चव्हाण", subBoothAgentContact: "7666389678" },
+        { subBoothNumber: 32, subBoothName: "पूर्व-पश्चिम इमारत, खो.क्र. 5", subBoothNameEnglish: "East-West Building, Room 5", subBoothAgentName: "श्रद्धा स्वप्निल चव्हाण", subBoothAgentContact: "7666389679" },
         { subBoothNumber: 33, subBoothName: "पूर्व-पश्चिम इमारत, खो.क्र. 6", subBoothNameEnglish: "East-West Building, Room 6", subBoothAgentName: "मिश्रा विश्वास वेदप्रकाश", subBoothAgentContact: "7744008554" },
       ],
     },

@@ -50,8 +50,8 @@ const ShareIcon = ({ className }) => (
 
 const BoothTable = ({ booths, onShare }) => {
   return (
-    <div className="overflow-x-auto w-full rounded-lg border border-gray-200 shadow-inner">
-      <table className="w-full border-collapse hidden md:table">
+    <div className="overflow-x-auto w-full rounded-lg border border-gray-200 shadow-inner -mx-2 sm:mx-0">
+      <table className="w-full border-collapse hidden md:table min-w-full">
         <thead className="bg-gradient-to-r from-[#ffb366] to-[#ff9933] text-white sticky top-0 z-10">
           <tr>
             <th className="py-4 px-3 sm:px-4 md:px-5 text-left font-bold text-xs sm:text-sm md:text-base sticky top-0 z-10 min-w-[250px] sm:min-w-[300px] md:min-w-[350px] shadow-md">
@@ -65,12 +65,12 @@ const BoothTable = ({ booths, onShare }) => {
         <tbody className="bg-white divide-y divide-gray-100">
           {booths.map((booth, index) => {
             const subBoothsText = (booth.subBooths || [])
-              .map((sb) => `${sb.subBoothNumber}. ${sb.subBoothName}`)
+              .map((sb) => `${sb.subBoothNumber}. ${sb.subBoothName} >> ${sb.subBoothAgentName || "N"} | ${sb.subBoothAgentContact || "N"}`)
               .join("\n");
 
             const shareText = [
               booth.boothName,
-              booth.boothLocation,
+              `Location: ${booth.boothLocation}`,
               subBoothsText ? `\nबुथ क्र:\n${subBoothsText}` : "",
             ]
               .filter(Boolean)
@@ -82,22 +82,37 @@ const BoothTable = ({ booths, onShare }) => {
               >
                 <td className="py-4 px-3 sm:px-4 md:px-5 align-top leading-relaxed">
                   <div className="space-y-2">
-                    <div className="text-gray-900 text-sm sm:text-base font-semibold leading-relaxed">
+                    <div className="text-gray-900 text-sm sm:text-base font-semibold leading-relaxed break-words">
                       {booth.boothName}
                     </div>
                     {Array.isArray(booth.subBooths) && booth.subBooths.length > 0 && (
                       <div className="mt-3">
-                        <ul className="list-none pl-0 space-y-1">
+                        <ul className="list-none pl-0 space-y-2 sm:space-y-1">
                           {booth.subBooths.map((sb, sbIndex) => (
                             <li key={sbIndex} className="text-xs sm:text-sm text-gray-700">
-                              <span className="inline-flex items-center gap-2 flex-wrap">
-                                <span className="inline-flex items-center justify-center min-w-[34px] px-2 py-0.5 rounded-full bg-gradient-to-r from-[#ffb366] to-[#ff9933] text-white font-extrabold text-xs shadow-sm">
+                              {/* Mobile: Row 1 - Booth number + Sub-booth name */}
+                              <div className="flex flex-row items-center gap-2 sm:hidden mb-1">
+                                <span className="inline-flex items-center justify-center w-fit min-w-[34px] px-2 py-0.5 rounded-full bg-gradient-to-r from-[#ffb366] to-[#ff9933] text-white font-extrabold text-xs shadow-sm">
                                   {sb.subBoothNumber}
                                 </span>
-                                <span className="font-semibold">
-                                  {sb.subBoothName} {'>>'} {sb.subBoothAgentName || "N"} | {sb.subBoothAgentContact || "N"}
+                                <span className="font-semibold break-words flex-1">
+                                  {sb.subBoothName}
                                 </span>
-                              </span>
+                              </div>
+                              {/* Mobile: Row 2 - Agent info */}
+                              <div className="text-gray-600 text-xs sm:hidden pl-[42px]">
+                                {sb.subBoothAgentName || "N"} | <a href={`tel:${sb.subBoothAgentContact || ""}`} className="text-blue-600 hover:text-blue-800 underline">{sb.subBoothAgentContact || "N"}</a>
+                              </div>
+                              {/* Desktop: All in one row */}
+                              <div className="hidden sm:flex sm:items-center gap-2 flex-wrap">
+                                <span className="inline-flex items-center justify-center w-fit min-w-[34px] px-2 py-0.5 rounded-full bg-gradient-to-r from-[#ffb366] to-[#ff9933] text-white font-extrabold text-xs shadow-sm">
+                                  {sb.subBoothNumber}
+                                </span>
+                                <span className="font-semibold break-words flex-1">
+                                  <span className="break-words">{sb.subBoothName}</span>
+                                  <span className="text-gray-600 text-xs sm:text-sm"> {'>>'} {sb.subBoothAgentName || "N"} | <a href={`tel:${sb.subBoothAgentContact || ""}`} className="text-blue-600 hover:text-blue-800 underline">{sb.subBoothAgentContact || "N"}</a></span>
+                                </span>
+                              </div>
                             </li>
                           ))}
                         </ul>
