@@ -74,7 +74,7 @@ const Hero = () => {
                   <span className="text-gray-500">|</span>
                   <span className="font-semibold">१</span>
                   <span className="text-gray-500">|</span>
-                  <span className="font-semibold">श्री. भागवत पाराजी आरोटे</span>
+                  <span className="font-semibold">भागवत पाराजी आरोटे</span>
                 </div>
               </div>
             </div>
@@ -128,6 +128,8 @@ const Hero = () => {
               </div>
             </div>
           </div>
+
+          
         </div>
       </div>
     </section>
