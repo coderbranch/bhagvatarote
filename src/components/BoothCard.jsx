@@ -49,31 +49,51 @@ const ShareIcon = ({ className }) => (
 );
 
 const BoothCard = ({ booth, index, onShare }) => {
-  const shareText = `${booth.boothName}\n${booth.boothNameEnglish}\n${booth.BoothaLocation}`;
+  const subBoothsText = (booth.subBooths || [])
+    .map((sb) => `${sb.subBoothNumber}. ${sb.subBoothName}`)
+    .join("\n");
+
+  const shareText = [
+    booth.boothName,
+    booth.boothLocation,
+    subBoothsText ? `\nबुथ क्र:\n${subBoothsText}` : "",
+  ]
+    .filter(Boolean)
+    .join("\n");
 
   return (
     <div className="bg-white border border-gray-200 rounded-xl sm:rounded-2xl p-4 sm:p-5 shadow-md hover:shadow-lg transition-all duration-300 hover:border-[#ffb366] group">
       {/* Header with Number Badge */}
-      <div className="flex justify-between items-center mb-4 pb-3 border-b-2 border-[#ffb366] bg-gradient-to-r from-[#ffcc99]/20 to-[#ffb366]/20 -mx-4 sm:-mx-5 px-4 sm:px-5 rounded-t-xl sm:rounded-t-2xl">
-        <div className="bg-gradient-to-br from-[#ffb366] to-[#ff9933] text-white w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center font-bold text-sm sm:text-base shadow-md group-hover:scale-110 transition-transform duration-300">
-          {index + 1}
-        </div>
-      </div>
+      <div className="mb-4 pb-3 border-b-2 border-[#ffb366] bg-gradient-to-r from-[#ffcc99]/20 to-[#ffb366]/20 -mx-4 sm:-mx-5 px-4 sm:px-5 rounded-t-xl sm:rounded-t-2xl" />
 
       {/* Booth Information */}
       <div className="mb-5 sm:mb-6 space-y-2">
         <div className="text-gray-900 text-sm sm:text-base leading-relaxed font-medium">
           {booth.boothName}
         </div>
-        <div className="text-gray-600 text-xs sm:text-sm italic leading-relaxed">
-          {booth.boothNameEnglish}
-        </div>
+        {Array.isArray(booth.subBooths) && booth.subBooths.length > 0 && (
+          <div className="pt-2">
+            <div className="text-xs font-bold text-gray-700 mb-1">बुथ क्र</div>
+            <ul className="list-none pl-0 space-y-1">
+              {booth.subBooths.map((sb, sbIndex) => (
+                <li key={sbIndex} className="text-xs text-gray-700">
+                  <span className="inline-flex items-center gap-2">
+                    <span className="inline-flex items-center justify-center min-w-[34px] px-2 py-0.5 rounded-full bg-gradient-to-r from-[#ffb366] to-[#ff9933] text-white font-extrabold text-xs shadow-sm">
+                      {sb.subBoothNumber}
+                    </span>
+                    <span className="font-semibold">{sb.subBoothName}</span>
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
 
       {/* Action Buttons */}
       <div className="flex flex-wrap gap-2.5 sm:gap-3 justify-center items-center">
         <a
-          href={booth.BoothaLocation}
+          href={booth.boothLocation}
           className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#ffb366] to-[#ff9933] text-white px-4 sm:px-5 py-2.5 sm:py-3 rounded-lg font-semibold text-sm sm:text-base no-underline whitespace-nowrap shadow-md hover:shadow-xl hover:scale-105 active:scale-95 transition-all duration-200"
           target="_blank"
           rel="noopener noreferrer"

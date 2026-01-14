@@ -54,9 +54,6 @@ const BoothTable = ({ booths, onShare }) => {
       <table className="w-full border-collapse hidden md:table">
         <thead className="bg-gradient-to-r from-[#ffb366] to-[#ff9933] text-white sticky top-0 z-10">
           <tr>
-            <th className="py-4 px-3 sm:px-4 md:px-5 text-left font-bold text-xs sm:text-sm md:text-base sticky top-0 z-10 w-[60px] sm:w-[70px] text-center shadow-md">
-              No
-            </th>
             <th className="py-4 px-3 sm:px-4 md:px-5 text-left font-bold text-xs sm:text-sm md:text-base sticky top-0 z-10 min-w-[250px] sm:min-w-[300px] md:min-w-[350px] shadow-md">
               Booth Name
             </th>
@@ -67,31 +64,50 @@ const BoothTable = ({ booths, onShare }) => {
         </thead>
         <tbody className="bg-white divide-y divide-gray-100">
           {booths.map((booth, index) => {
-            const shareText = `${booth.boothName}\n${booth.boothNameEnglish}\n${booth.BoothaLocation}`;
+            const subBoothsText = (booth.subBooths || [])
+              .map((sb) => `${sb.subBoothNumber}. ${sb.subBoothName}`)
+              .join("\n");
+
+            const shareText = [
+              booth.boothName,
+              booth.boothLocation,
+              subBoothsText ? `\nबुथ क्र:\n${subBoothsText}` : "",
+            ]
+              .filter(Boolean)
+              .join("\n");
             return (
               <tr 
                 key={index} 
                 className="border-b border-gray-100 transition-all duration-200 hover:bg-orange-50 last:border-b-0 group"
               >
-                <td className="py-4 px-3 sm:px-4 md:px-5 align-top text-center">
-                  <div className="inline-flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 bg-gradient-to-br from-[#ffb366] to-[#ff9933] text-white rounded-full font-bold text-sm sm:text-base shadow-sm group-hover:scale-110 transition-transform duration-200">
-                    {index + 1}
-                  </div>
-                </td>
                 <td className="py-4 px-3 sm:px-4 md:px-5 align-top leading-relaxed">
                   <div className="space-y-2">
                     <div className="text-gray-900 text-sm sm:text-base font-semibold leading-relaxed">
                       {booth.boothName}
                     </div>
-                    <div className="text-gray-600 text-xs sm:text-sm md:text-base italic leading-relaxed">
-                      {booth.boothNameEnglish}
-                    </div>
+                    {Array.isArray(booth.subBooths) && booth.subBooths.length > 0 && (
+                      <div className="mt-3">
+                        <div className="text-xs font-bold text-gray-700 mb-1">बुथ क्र</div>
+                        <ul className="list-none pl-0 space-y-1">
+                          {booth.subBooths.map((sb, sbIndex) => (
+                            <li key={sbIndex} className="text-xs sm:text-sm text-gray-700">
+                              <span className="inline-flex items-center gap-2">
+                                <span className="inline-flex items-center justify-center min-w-[34px] px-2 py-0.5 rounded-full bg-gradient-to-r from-[#ffb366] to-[#ff9933] text-white font-extrabold text-xs shadow-sm">
+                                  {sb.subBoothNumber}
+                                </span>
+                                <span className="font-semibold">{sb.subBoothName}</span>
+                              </span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
                   </div>
                 </td>
                 <td className="py-4 px-3 sm:px-4 md:px-5 align-top text-center">
                   <div className="flex gap-2 sm:gap-2.5 justify-center flex-wrap items-center">
                     <a
-                      href={booth.BoothaLocation}
+                      href={booth.boothLocation}
                       className="inline-flex items-center justify-center gap-1.5 bg-gradient-to-r from-[#ffb366] to-[#ff9933] text-white px-3 sm:px-4 py-2 sm:py-2.5 rounded-lg font-semibold text-xs sm:text-sm no-underline whitespace-nowrap shadow-md hover:shadow-lg hover:scale-105 active:scale-95 transition-all duration-200"
                       target="_blank"
                       rel="noopener noreferrer"
