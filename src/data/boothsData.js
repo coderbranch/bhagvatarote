@@ -92,7 +92,7 @@ export const allBoothsData = {
       boothSrNo: 7,
       boothName: "चाणक्यनगर सभागृह (दक्षिणमुखी हनुमान मंदिर)",
       boothNameEnglish: "Chanakyanagar Hall (Hanuman Temple Hall)",
-      boothLocation: "https://maps.app.goo.gl/TebA6LVMMFZN8fJM9",
+      boothLocation: "https://maps.app.goo.gl/udQAyQLki6e9AAZs6",
       subBooths: [{ subBoothNumber: 15, subBoothName: "मुख्य सभागृह", subBoothNameEnglish: "Main Hall", subBoothAgentName: "अविनाश राजेंद्र पाटील", subBoothAgentContact: "7385250984" }],
     },
     {
@@ -210,7 +210,7 @@ export const allBoothsData = {
       boothName: "संत गोरोबा काका मंदिर, अहिल्याबाई होळकर सभागृह, संजीवनगर",
       boothNameEnglish: "Sant Goroba Kaka Temple, Ahilyabai Holkar Hall, Sanjivannagar",
       boothLocation: "https://maps.app.goo.gl/n769uHCBpCGotheD8",
-      subBooths: [{ subBoothNumber: 49, subBoothName: "सभागृह खो.क्र. 1", subBoothNameEnglish: "Hall Room 1", subBoothAgentName: "अर्जुन संतोष सिंग", subBoothAgentContact: "8149545327" }],
+      subBooths: [{ subBoothNumber: 49, subBoothName: "सभागृह खो.क्र. 1", subBoothNameEnglish: "Hall Room 1", subBoothAgentName: "सचिन संजय देहाडे", subBoothAgentContact: "8668432619" }],
     },
   ],
 };
