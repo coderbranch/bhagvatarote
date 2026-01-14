@@ -1,12 +1,21 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { allBoothsData } from '../data/boothsData'
 import BoothTable from './BoothTable'
 import BoothCard from './BoothCard'
 import Hero from './Hero'
+// import candidatesImage1 from '../assets/ChatGPT Image Jan 14, 2026, 10_21_24 PM1.png'
 
 export default function HomePage() {
   const booths = allBoothsData.booths;
   const totalBooths = booths.reduce((sum, booth) => sum + (booth.subBooths?.length || 0), 0);
+
+  const scrollToBooths = () => {
+    const boothsSection = document.getElementById('booths-section');
+    if (boothsSection) {
+      boothsSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   const handlePrint = async () => {
     // Group booths by page
@@ -184,8 +193,41 @@ export default function HomePage() {
 
   return (
     <>
+
+ {/* Full Screen Image Section */}
+ <section className="w-full flex flex-col items-center justify-center py-4 sm:py-6 md:py-8">
+        <div className="w-full max-w-3xl px-4 mb-6 sm:mb-8">
+          <img
+            src={"https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Logo_of_Shiv_Sena.svg/960px-Logo_of_Shiv_Sena.svg.png"}
+            alt="प्रभाग २६ शिवसेना अधिकृत उमेदवार"
+            className="w-full h-auto object-contain mx-auto"
+          />
+        </div>
+        
+        {/* Call-to-Action Buttons */}
+        <div className="flex flex-row gap-4 justify-center flex-wrap">
+          <button
+            onClick={scrollToBooths}
+            className="inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[#ffb366] to-[#ff9933] hover:from-[#ff9933] hover:to-[#ff7700] text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-base sm:text-lg lg:text-xl shadow-xl hover:shadow-2xl hover:scale-105 active:scale-95 transition-all duration-300 transform"
+          >
+            <span className="text-xl sm:text-2xl">🗳️</span>
+            <span>आपले मतदान केंद्र शोधा</span>
+          </button>
+          
+          <Link
+            to="/evm-practice"
+            className="inline-flex items-center justify-center gap-3 bg-white border-2 border-[#ffb366] hover:bg-[#ffb366] text-[#ff9933] hover:text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-base sm:text-lg lg:text-xl shadow-xl hover:shadow-2xl hover:scale-105 active:scale-95 transition-all duration-300 transform"
+          >
+            <span className="text-xl sm:text-2xl">📱</span>
+            <span>EVM Practice</span>
+          </Link>
+        </div>
+      </section>
+
       {/* Hero Section */}
       <Hero />
+      
+     
       
       {/* Main Content */}
       <div id="booths-section" className="p-2 sm:p-4 md:p-5 lg:p-6 scroll-mt-20">

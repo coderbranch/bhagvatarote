@@ -1,15 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import heroImage from '../assets/DSC_5588a.jpg';
 import candidatesImage from '../assets/ChatGPT Image Jan 14, 2026, 10_21_24 PM.png';
 
 const Hero = () => {
-  const scrollToBooths = () => {
-    const boothsSection = document.getElementById('booths-section');
-    if (boothsSection) {
-      boothsSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   return (
     <section className="bg-gradient-to-br from-[#ffcc99]/40 via-white to-[#ffb366]/30 py-12 sm:py-16 md:py-20 lg:py-24">
@@ -88,25 +81,6 @@ const Hero = () => {
             <p className="text-base sm:text-lg md:text-xl text-gray-700 mb-8 sm:mb-10 leading-relaxed max-w-2xl mx-auto lg:mx-0">
               २०२६ महानगरपालिका निवडणुकीसाठी हे संकेतस्थळ नागरिकांना त्यांचे मतदान केंद्र (बूथ) सहज शोधण्यासाठी तयार करण्यात आले आहे.
             </p>
-
-            {/* Call-to-Action Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <button
-                onClick={scrollToBooths}
-                className="inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[#ffb366] to-[#ff9933] hover:from-[#ff9933] hover:to-[#ff7700] text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-base sm:text-lg lg:text-xl shadow-xl hover:shadow-2xl hover:scale-105 active:scale-95 transition-all duration-300 transform"
-              >
-                <span className="text-xl sm:text-2xl">🗳️</span>
-                <span>आपले मतदान केंद्र शोधा</span>
-              </button>
-              
-              <Link
-                to="/evm-practice"
-                className="inline-flex items-center justify-center gap-3 bg-white border-2 border-[#ffb366] hover:bg-[#ffb366] text-[#ff9933] hover:text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-base sm:text-lg lg:text-xl shadow-xl hover:shadow-2xl hover:scale-105 active:scale-95 transition-all duration-300 transform"
-              >
-                <span className="text-xl sm:text-2xl">📱</span>
-                <span>EVM Practice</span>
-              </Link>
-            </div>
           </div>
 
           {/* Right Side - Image */}
