@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import heroImage from '../assets/DSC_5588a.jpg';
+import candidatesImage from '../assets/ChatGPT Image Jan 14, 2026, 10_21_24 PM.png';
 
 const Hero = () => {
   const scrollToBooths = () => {
@@ -40,6 +41,43 @@ const Hero = () => {
                 श्री. भागवत पाराजी आरोटे
               </span>
             </h1>
+            
+            {/* Partner Candidates */}
+            <div className="mb-6 sm:mb-8 bg-gradient-to-r from-[#ffcc99]/30 to-[#ffb366]/20 rounded-xl p-4 sm:p-5 border-2 border-[#ffb366]/40">
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-800 mb-3 sm:mb-4 text-center lg:text-left">
+                प्रभाग २६  शिवसेना अधिकृत उमेदवार
+              </h3>
+              <div className="space-y-2 sm:space-y-3">
+                <div className="flex items-center gap-2 sm:gap-3 text-base sm:text-lg md:text-xl text-gray-700">
+                  <span className="font-bold text-[#ff9933]">प्रभाग क्र. २६ अ</span>
+                  <span className="text-gray-500">|</span>
+                  <span className="font-semibold">१</span>
+                  <span className="text-gray-500">|</span>
+                  <span className="font-semibold">इंगोले निवृत्ती हरिभाऊ</span>
+                </div>
+                <div className="flex items-center gap-2 sm:gap-3 text-base sm:text-lg md:text-xl text-gray-700">
+                  <span className="font-bold text-[#ff9933]">प्रभाग क्र. २६ ब</span>
+                  <span className="text-gray-500">|</span>
+                  <span className="font-semibold">१</span>
+                  <span className="text-gray-500">|</span>
+                  <span className="font-semibold">गायकर हर्षदा समाधान</span>
+                </div>
+                <div className="flex items-center gap-2 sm:gap-3 text-base sm:text-lg md:text-xl text-gray-700">
+                  <span className="font-bold text-[#ff9933]">प्रभाग क्र. २६ क</span>
+                  <span className="text-gray-500">|</span>
+                  <span className="font-semibold">२</span>
+                  <span className="text-gray-500">|</span>
+                  <span className="font-semibold">जाधव नयना निलेश</span>
+                </div>
+                <div className="flex items-center gap-2 sm:gap-3 text-base sm:text-lg md:text-xl text-gray-700">
+                  <span className="font-bold text-[#ff9933]">प्रभाग क्र. २६ ड</span>
+                  <span className="text-gray-500">|</span>
+                  <span className="font-semibold">१</span>
+                  <span className="text-gray-500">|</span>
+                  <span className="font-semibold">श्री. भागवत पाराजी आरोटे</span>
+                </div>
+              </div>
+            </div>
             
             {/* Subheading */}
             <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-700 mb-6 sm:mb-8 leading-relaxed">
